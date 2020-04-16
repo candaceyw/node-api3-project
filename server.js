@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express'); // importing a CommonJS module
 const userRouter = require('./users/userRouter');
 const postRouter = require('./posts/postRouter');
@@ -8,10 +9,10 @@ const helmet = require('helmet');
 
 // built-in middleware
 server.use(express.json());
-server.use(cors());
 
 // 3rd party
 server.use(helmet());
+server.use(cors());
 
 //custom from function below
 server.use(logger);
@@ -21,7 +22,7 @@ server.use('/users', userRouter);
 server.use('/posts', postRouter);
 
 server.get('/', (req, res) => {
-	res.send(`<h2>Let's write some middleware!</h2>`);
+	res.send(`<h2>Let's write some middleware, ${process.env.AUTHKEY}</h2>`);
 });
 
 //custom middleware

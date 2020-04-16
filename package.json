@@ -4,7 +4,7 @@
 	"description": "Node API 3 Project",
 	"main": "index.js",
 	"scripts": {
-		"server": "nodemon --require dotenv/config index.js"
+		"server": "nodemon index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -23,6 +23,7 @@
 	},
 	"homepage": "https://github.com/LambdaSchool/node-api3-project#readme",
 	"dependencies": {
+		"concurrently": "^5.1.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"helmet": "^3.22.0",
