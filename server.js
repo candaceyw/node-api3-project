@@ -5,6 +5,7 @@ const postRouter = require('./posts/postRouter');
 const server = express();
 const cors = require('cors');
 const helmet = require('helmet');
+const port = process.env.PORT || 5500;
 
 // built-in middleware
 server.use(express.json());
