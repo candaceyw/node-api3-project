@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express'); // importing a CommonJS module
 const userRouter = require('./users/userRouter');
 const postRouter = require('./posts/postRouter');
